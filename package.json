@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "start": "node ./app.js",
+    "react": "npm run start --prefix ./client",
     "lint": "eslint .",
     "lintfix": "eslint . --fix"
   },
