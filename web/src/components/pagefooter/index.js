@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.less'
-const footerText = 'Ant Design ©2018 Created by Ant UED'
+const footerText = 'Vapour ©2021 Created by Appolo'
 
 class PageFooter extends React.Component {
   
