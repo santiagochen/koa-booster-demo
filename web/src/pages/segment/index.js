@@ -3,16 +3,16 @@ import { Layout } from 'antd';
 const { Header, Content } = Layout;
 
 
-class Setting extends React.Component {
+class Segment extends React.Component {
   
   render(){
     return (
       <>
-        Setting
+        Segment
       </>
     )
   }
 
 }
 
-export default Setting;
+export default Segment;

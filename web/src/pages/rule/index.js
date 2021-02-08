@@ -3,16 +3,16 @@ import { Layout } from 'antd';
 const { Header, Content } = Layout;
 
 
-class About extends React.Component {
+class Rule extends React.Component {
   
   render(){
     return (
       <>
-        About
+        Rule
       </>
     )
   }
 
 }
 
-export default About;
+export default Rule;

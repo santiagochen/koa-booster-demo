@@ -3,16 +3,16 @@ import { Layout } from 'antd';
 import './index.less'
 const { Header, Content } = Layout;
 
-class DashBoard extends React.Component {
+class Log extends React.Component {
   
   render(){
     return (
       <>
-        dashboard2
+        Log
       </>
     )
   }
 
 }
 
-export default DashBoard;
+export default Log;

@@ -32,7 +32,7 @@ class PageBoard extends React.Component {
           
           <Col flex="auto">
 
-          <Menu mode="horizontal" style={{textAlign:'right'}}>
+          {/* <Menu mode="horizontal" style={{textAlign:'right'}}>
             <Menu.Item key="mail" icon={<MailOutlined />}>
               Navigation One
             </Menu.Item>
@@ -42,13 +42,13 @@ class PageBoard extends React.Component {
             <Menu.Item key="mail3" icon={<MailOutlined />}>
               Navigation Three
             </Menu.Item>
-          </Menu>
+          </Menu> */}
 
           </Col>
           <Col flex="160px" style={{textAlign:"center"}}>
           <Dropdown overlay={menu} >
             <a style={{color:'#000'}} className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-              <Avatar src={vapourLogo} />  用户名称 <DownOutlined />
+              <Space value="middle"><Avatar src={vapourLogo} />[用户名称]<DownOutlined /></Space>
             </a>
           </Dropdown>
           </Col>

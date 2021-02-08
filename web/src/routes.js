@@ -1,13 +1,13 @@
-import About from './pages/about/index';
-import Welcome from './pages/welcome/index';
-import Dashboard from './pages/dashboard/index';
-import Setting from './pages/setting/index';
+import Rule from './pages/rule/index';
+import Segment from './pages/segment/index';
+import Activity from './pages/activity/index';
+import Log from './pages/log/index';
+import Statics from './pages/statics/index';
 
-const routes = [
-  { path:'/', name:'欢迎', comp:<Welcome/> },
-  { path:'/dashboard', name:'控制台', comp:<Dashboard/> },
-  { path:'/about', name:'关于', comp:<About/> },
-  { path:'/setting', name:'设置', comp:<Setting/> }
+export default [
+  { path:'/', name:'活动页面', comp:<Activity/>, alias:'activity' },
+  { path:'/segment', name:'活动组件', comp:<Segment/> },
+  { path:'/rule', name:'活动规则', comp:<Rule/> },
+  { path:'/statics', name:'活动统计', comp:<Statics/> },
+  { path:'/log', name:'活动日志', comp:<Log/> }
 ]
-
-export default routes

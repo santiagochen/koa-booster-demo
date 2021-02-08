@@ -1,5 +1,7 @@
 import React from 'react';
 import { PageHeader } from 'antd';
+import { useLocation } from 'react-router-dom';
+
 const routes = [
   {
     path: 'index',
@@ -16,12 +18,15 @@ const routes = [
 ];
 
 class PageTitle extends React.Component {
+
+  
+
   render() {
     return (
       <>
         <PageHeader
           className="site-page-header"
-          title="Title"
+          title={ JSON.stringify(this.props) + ' :: '}
           breadcrumb={{ routes }}
           subTitle="This is a subtitle"
         />
