@@ -1,39 +1,23 @@
 import React from 'react';
 import { PageHeader } from 'antd';
-import { useLocation } from 'react-router-dom';
 
-const routes = [
-  {
-    path: 'index',
-    breadcrumbName: 'First-level Menu',
-  },
-  {
-    path: 'first',
-    breadcrumbName: 'Second-level Menu',
-  },
-  {
-    path: 'second',
-    breadcrumbName: 'Third-level Menu',
-  },
-];
-
-class PageTitle extends React.Component {
-
+const PageTitle = ({pathname})=>{
   
+  const routes = pathname.split('/').map(item=>({
+    path: item,
+    breadcrumbName: item
+  }))
 
-  render() {
-    return (
-      <>
-        <PageHeader
-          className="site-page-header"
-          title={ JSON.stringify(this.props) + ' :: '}
-          breadcrumb={{ routes }}
-          subTitle="This is a subtitle"
-        />
-      </>
-    )
-  }
+  return  (
+    <>
+      <PageHeader
+        className="site-page-header"
+        // title={pathname}
+        breadcrumb={{ routes }}
+        // subTitle={"This is a subtitle - "+pathname }
+      />
+    </>
+  )
 }
 
-export default PageTitle;
-
+export default PageTitle

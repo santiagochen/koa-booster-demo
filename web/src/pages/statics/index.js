@@ -1,17 +1,19 @@
 import React from 'react';
-import { Layout } from 'antd';
-const { Header, Content } = Layout;
+import {  } from 'antd';
+import PageTitle from '../../components/page_title/index';
+import './index.less'
 
-
-class Statics extends React.Component {
+const Statics = ({location})=>{
   
-  render(){
-    return (
-      <>
-        Statics
-      </>
-    )
-  }
+  return (
+    <>
+    <PageTitle pathname={location.pathname}/> 
+    <div style={{padding:'0 24px'}}>
+    Statics
+    </div>
+    </>
+  )
+  
 
 }
 

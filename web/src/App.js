@@ -2,29 +2,30 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  useLocation
+  Route
 } from "react-router-dom";
 import { Layout, Affix } from 'antd';
 import PageHeader from './components/page_header/index';
 import PageSide from './components/page_side/index';
 import PageBoard from './components/page_board/index';
 import PageFooter from './components/page_footer/index';
+
+import Rule from './pages/rule/index';
+import Segment from './pages/segment/index';
+import Activity from './pages/activity/index';
+import Log from './pages/log/index';
+import Statics from './pages/statics/index';
+import Page404 from './pages/page404/index';
+
 import routes from './routes'
 
 import './App.less';
 
 function App() {
   const { Header, Footer, Sider, Content } = Layout;
-  // let location = useLocation();
-  // console.log( 'location : ', useLocation() )
-  // let [pageSideCollapsed, setPageSideCollapsed] = useState(false)
-  // let onCollapse = collapsed => {
-  //   setPageSideCollapsed( collapsed )
-  // };
 
   return (
-    <Router><Switch>
+    <Router>
     <Layout style={{ height: '100%' }} >
       <Affix offsetTop={0}>
       <Header style={{ padding:'0px'}}>
@@ -37,21 +38,23 @@ function App() {
         </Affix>
         <Layout>
           <Content>
-            <PageBoard>
-              
-              { routes.map((item,index)=>(
-                <Route key={index} exact path={item.path}>
-                  {item.comp}
-                </Route>
-              )) }
-              
-            </PageBoard>
+          <Switch>
+            
+            { routes.map((item,index)=>(
+              <Route 
+                key={index} exact 
+                path={item.path?item.path:undefined}
+                component={item.comp} 
+              />
+            )) }
+             
+          </Switch>   
           </Content>
-          {/* <Footer><PageFooter/></Footer> */}
+          
         </Layout>
       </Layout>
     </Layout>
-    </Switch></Router>  
+    </Router>  
   );
 }
 

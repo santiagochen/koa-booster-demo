@@ -1,17 +1,19 @@
 import React from 'react';
-import { Layout } from 'antd';
+import {  } from 'antd';
+import PageTitle from '../../components/page_title/index';
 import './index.less'
-const { Header, Content } = Layout;
 
-class Log extends React.Component {
+const Log = ({location})=>{
   
-  render(){
-    return (
-      <>
-        Log
-      </>
-    )
-  }
+  return (
+    <>
+    <PageTitle pathname={location.pathname}/> 
+    <div style={{padding:'0 24px'}}>
+      log
+    </div>
+    </>
+  )
+  
 
 }
 
