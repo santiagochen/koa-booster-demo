@@ -9,7 +9,7 @@ const Statics = ({location})=>{
     <>
     <PageTitle pathname={location.pathname}/> 
     <div style={{padding:'0 24px'}}>
-    Statics
+    Statics 
     </div>
     </>
   )

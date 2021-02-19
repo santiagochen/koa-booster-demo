@@ -17,7 +17,8 @@ import Log from './pages/log/index';
 import Statics from './pages/statics/index';
 import Page404 from './pages/page404/index';
 
-import routes from './routes'
+import routes from './config/routes'
+import { AppContext } from './hooks/context'
 
 import './App.less';
 
@@ -25,16 +26,22 @@ function App() {
   const { Header, Footer, Sider, Content } = Layout;
 
   return (
+    <AppContext.Provider value={{routes, 'theme':'light'}}>
     <Router>
+    
     <Layout style={{ height: '100%' }} >
       <Affix offsetTop={0}>
-      <Header style={{ padding:'0px'}}>
+      <Header style={{ padding:'0px', 'borderBottom':'solid 1px #ddd' }}>
         <PageHeader />
       </Header>
       </Affix>
       <Layout>
         <Affix offsetTop={64} style={{backgroundColor:'#ffffff'}}>
-          <Sider theme='light' collapsible ><PageSide/></Sider>
+          <Sider theme='light' collapsible >
+            <Switch>
+              <PageSide/>
+            </Switch>
+          </Sider>
         </Affix>
         <Layout>
           <Content>
@@ -54,7 +61,10 @@ function App() {
         </Layout>
       </Layout>
     </Layout>
+    
     </Router>  
+    </AppContext.Provider>
+    
   );
 }
 

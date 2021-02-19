@@ -1,9 +1,9 @@
-import Rule from './pages/rule/index';
-import Segment from './pages/segment/index';
-import Activity from './pages/activity/index';
-import Log from './pages/log/index';
-import Statics from './pages/statics/index';
-import Page404 from './pages/page404/index';
+import Rule from '../pages/rule/index';
+import Segment from '../pages/segment/index';
+import Activity from '../pages/activity/index';
+import Log from '../pages/log/index';
+import Statics from '../pages/statics/index';
+import Page404 from '../pages/page404/index';
 
 export default [
   { path:'/', name:'活动页面', comp:Activity, alias:'activity' },
