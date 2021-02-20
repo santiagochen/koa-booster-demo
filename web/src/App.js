@@ -10,13 +10,6 @@ import PageSide from './components/page_side/index';
 import PageBoard from './components/page_board/index';
 import PageFooter from './components/page_footer/index';
 
-import Rule from './pages/rule/index';
-import Segment from './pages/segment/index';
-import Activity from './pages/activity/index';
-import Log from './pages/log/index';
-import Statics from './pages/statics/index';
-import Page404 from './pages/page404/index';
-
 import routes from './config/routes'
 import { AppContext } from './hooks/context'
 
@@ -30,13 +23,9 @@ function App() {
     <Router>
     
     <Layout style={{ height: '100%' }} >
-      <Affix offsetTop={0}>
-      <Header style={{ padding:'0px', 'borderBottom':'solid 1px #ddd' }}>
-        <PageHeader />
-      </Header>
-      </Affix>
+      
       <Layout>
-        <Affix offsetTop={64} style={{backgroundColor:'#ffffff'}}>
+        <Affix style={{backgroundColor:'#ffffff'}}>
           <Sider theme='light' collapsible >
             <Switch>
               <PageSide/>

@@ -4,18 +4,6 @@ import { UserOutlined, MailOutlined, DownOutlined, MenuUnfoldOutlined, MenuFoldO
 import vapourLogo from '../../assets/vapour.png';
 import './index.less';
 
-const menu = (
-  <Menu>
-    <Menu.Item key="0">
-      <a href="http://www.alipay.com/">1st menu item</a>
-    </Menu.Item>
-    <Menu.Item key="1">
-      <a href="http://www.taobao.com/">2nd menu item</a>
-    </Menu.Item>
-    <Menu.Divider />
-    <Menu.Item key="3">3rd menu item</Menu.Item>
-  </Menu>
-);
 const PageBoard = ({location})=> {
   
   return (
@@ -24,7 +12,7 @@ const PageBoard = ({location})=> {
         <Col flex="120px" style={{textAlign:"center"}}>
           <Space>
           <Avatar src={vapourLogo} /> 
-          <Typography.Text type="primary">Vapour</Typography.Text>
+          <Typography.Text type="primary">Koa Booster</Typography.Text>
           </Space>
         </Col>
         
@@ -43,13 +31,13 @@ const PageBoard = ({location})=> {
         </Menu> */}
 
         </Col>
-        <Col flex="160px" style={{textAlign:"center"}}>
+        {/* <Col flex="160px" style={{textAlign:"center"}}>
         <Dropdown overlay={menu} >
           <a style={{color:'#000'}} className="ant-dropdown-link" onClick={e => e.preventDefault()}>
             <Space value="middle"><Avatar src={vapourLogo} />[用户名称]<DownOutlined /></Space>
           </a>
         </Dropdown>
-        </Col>
+        </Col> */}
       </Row>
     </>
   )
