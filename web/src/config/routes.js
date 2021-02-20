@@ -6,7 +6,8 @@ import Statics from '../pages/statics/index';
 import Page404 from '../pages/page404/index';
 
 export default [
-  { path:'/', name:'活动页面', comp:Activity, alias:'activity' },
+  { path:'/', name:'活动页面', comp:Activity },
+  { path:'/activity', name:'活动页面', comp:Activity },
   { path:'/segment', name:'活动组件', comp:Segment },
   { path:'/rule', name:'活动规则', comp:Rule },
   { path:'/statics', name:'活动统计', comp:Statics },

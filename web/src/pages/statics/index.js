@@ -7,9 +7,9 @@ const Statics = ({location})=>{
   
   return (
     <>
-    <PageTitle pathname={location.pathname}/> 
-    <div style={{padding:'0 24px'}}>
-    Statics 
+      <PageTitle location={location}/>
+      <div style={{padding:'0 24px'}}>
+      Statics 
     </div>
     </>
   )

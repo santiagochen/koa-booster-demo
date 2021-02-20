@@ -47,9 +47,9 @@ function App() {
           <Content>
           <Switch>
             
-            { routes.map((item,index)=>(
+            { routes.map((item)=>(
               <Route 
-                key={index} exact 
+                exact 
                 path={item.path?item.path:undefined}
                 component={item.comp} 
               />

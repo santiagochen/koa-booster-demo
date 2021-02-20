@@ -7,7 +7,7 @@ const Log = ({location})=>{
   
   return (
     <>
-    <PageTitle pathname={location.pathname}/> 
+    <PageTitle location={location}/>
     <div style={{padding:'0 24px'}}>
       log
     </div>

@@ -1,9 +1,10 @@
-import React, {useContext} from 'react';
+import React, {useContext} from 'react'
+import _ from 'lodash'
 import { AppContext } from '../../hooks/context'
 import {
   Link
 } from "react-router-dom";
-import { Menu, Button, Affix } from 'antd';
+import { Menu, Button, Affix } from 'antd'
 import {
   AppstoreAddOutlined,
   HomeOutlined,
@@ -14,16 +15,15 @@ import {
   ControlOutlined,
   PieChartOutlined,
   HistoryOutlined
-} from '@ant-design/icons';
+} from '@ant-design/icons'
 import './index.less'
 
 const { SubMenu } = Menu;
 
 const PageSide = ({location})=>{
-  const appCxt = useContext(AppContext);
+  
   return (
     <div style={{ width: '150' }}>
-      <div>SS: {JSON.stringify( appCxt )}</div>
       <Menu
         defaultSelectedKeys={[location.pathname]}
         // defaultOpenKeys={['sub1']}
