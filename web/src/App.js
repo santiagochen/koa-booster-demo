@@ -32,7 +32,7 @@ function App() {
             </Switch>
           </Sider>
         </Affix>
-        <Layout>
+        <Layout style={{height:'100%',overflow:'auto'}}>
           <Content>
           <Switch>
             
